@@ -1,0 +1,15 @@
+--- dmenu.c
++++ dmenu.c
+@@ -35,6 +37,12 @@ struct item {
+ 	int out;
+ };
+ 
++typedef struct {
++	const char *name;
++	enum XResType type;
++	void *dst;
++} XResPref;
++
+ static char text[BUFSIZ] = "";
+ static char *embed;
+ static int bh, mw, mh;
